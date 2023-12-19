@@ -7,7 +7,7 @@ y=ds['Salary']
 
 from sklearn.svm import SVC
 
-model=SVM()
+model=SVC()
 model.fit(x,y)
 
 print('\x1b[1;32;40m' + "Press exit to terminate....." + '\x1b[0m')

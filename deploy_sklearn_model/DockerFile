@@ -1,5 +1,9 @@
 FROM python:3.10
+WORKDIR /home
+
+COPY svm.py /home/svm.py
+COPY salaryDataSet.csv /home/salaryDataSet.csv
+
 RUN apt update && apt install -y python3-pip
 RUN pip3 install numpy scikit-learn pandas
-COPY svm.py app/
-CMD ["python3", "app/main.py" ]
+CMD python3 svm.py
